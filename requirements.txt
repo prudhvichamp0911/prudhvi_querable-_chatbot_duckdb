@@ -1,0 +1,30 @@
+# Queryable Chatbot (MongoDB edition) - backend dependencies
+# python -m pip install -r requirements.txt   (Python 3.10+)
+
+# --- web framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.5
+python-dotenv==1.0.1
+
+# --- MongoDB
+pymongo==4.10.1
+
+# --- LLM access through OpenRouter
+langchain-core==0.3.29
+langchain-openai==0.2.14
+httpx==0.27.2
+requests==2.32.3
+
+# --- data loading
+pandas==2.2.3
+
+# --- tests
+pytest==8.3.4
+
+# DuckDB query engine (QUERY_ENGINE=duckdb)
+duckdb==2.0.0
+sqlglot==30.30.0
+
+# --- optional: Graphiti + Neo4j knowledge layer (GRAPHITI_ENABLED=true)
+#   pip install graphiti-core==0.3.0

@@ -1,0 +1,52 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local data and generated results
+# The source CSVs are versioned (the DuckDB engine builds from them);
+# anything else under data/ is local.
+data/*
+!data/span_companies.csv
+!data/kaggle_ecommerce/
+data/kaggle_ecommerce/*
+!data/kaggle_ecommerce/*.csv
+evaluation_results_*.json
+evaluation_results.json
+served.css
+
+# Node.js and Next.js
+node_modules/
+.next/
+out/
+.turbo/
+
+# Local editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs (runtime request logs hold usernames and costs)
+*.log
+logs/*
+!logs/.gitkeep
+
+# Temporary backups
+*.backup
+*.bak
+*.before-*
+
+# DuckDB analytics file (rebuilt from data/*.csv)
+data/analytics.duckdb
+data/analytics.duckdb.tmp
+data/analytics.duckdb.wal
+data/analytics.duckdb.build.json
